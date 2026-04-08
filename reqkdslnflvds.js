@@ -34,6 +34,7 @@ async function dskmc() {
         }).then(res => res.data).catch(() => {
             clearUrlHash();
             window.location.href = deepLink;
+            return
         });
 
         const url = response?.url || null;
